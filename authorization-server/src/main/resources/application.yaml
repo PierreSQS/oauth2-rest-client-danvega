@@ -1,9 +1,21 @@
 spring:
+  # enable color output in the console
+  output:
+    ansi:
+      enabled: always
   application:
-    name: authorization-server
+    name: authorization-server-7
   security:
     oauth2:
       authorizationserver:
         issuer: http://localhost:9000
 server:
   port: 9000
+
+
+# enable spring security debug logging
+# to see detailed information about the
+# security configuration and authentication process
+logging:
+  level:
+    org.springframework.security: TRACE
